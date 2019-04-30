@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+body {
+font-family: 'Roboto Mono', monospace;
+}
+
+.page-wrap {
+width: 90%;
+margin: 0 auto;
+}
+
+.nav-button {
+text-decoration: none;
+font-size: 1.2rem;
+position: relative;
+top: 20px;
+}
+
+hr {
+float: left;
+color: lightgray;
+}
+
+a {
+color: #000;
+}
+
+a:hover {
+color: #ffd3d9;
+}
+
+mark {
+background-color: #fadadd;
+}
+
+.home-cont {
+//background-color: #ffd3d9;
+}
+
+.home-text {
+font-size: 1.5rem;
+margin-top: 5%%;
+line-height: 2.5rem;
+}
+
+.home-subtext {
+font-size: .8rem;
+color: darkgrey;
+margin-top: 10%;
+margin-bottom: 30%;   
+}
+
+.footer-text {
+font-size: .75rem;
+color: darkgrey;
+margin-top: 5%;
+margin-bottom: 15%;
+}
+
+h2 {
+font-size: 1rem;
+}
+
+h4 {
+font-size: 0.6rem;
+color: darkgray;
+text-align: center;
+}
+
+.nav-menu {
+margin-bottom: 30%;
+}
+
+.blog-post-image {
+width: 100%;
+height: 200px;
+position: relative;
+margin-top: 1rem;
+margin-bottom: 1rem;
+margin: 0 auto;
+}
+
+h3 {
+position: absolute;
+bottom: .5px;
+left: 3px;
+font-size: .8rem;
+}
+
+h3 a {
+text-decoration: none;
+}
+
+.blog-box {
+margin-bottom: 10%;
+}
+
+/* hamburger menu */
+.container {
+display: inline-block;
+cursor: pointer;
+float: right;
+position: relative;
+right: 0;
+top: 11px;
+}
+
+.bar1, .bar2, .bar3 {
+width: 30px;
+height: 4px;
+background-color: #818181;
+margin: 6px 0;
+}
+
+.overlay-text {
+width: 20%;
+transition: .5s ease;
+-webkit-transition: .5s ease;
+opacity:0;
+color: white;
+bottom: -10px;
+position: relative;
+font-size: 1rem;
+letter-spacing: .1rem;
+}
+
+.blog-post-image {
+width: 300px;
+overflow: hidden;
+}
+
+.blog-post-image:hover .overlay-text {
+opacity: 1;
+color: #fff;
+}
+
+.hover-zoom:hover {
+transition: .5s ease;
+-webkit-transform: scale(1.1); 
+transform: scale(1.1);
+}
+
+/* test nav */
+
+/* The Overlay (background) */
+.overlay {
+/* Height & width depends on how you want to reveal the overlay (see JS below) */    
+height: 100%;
+width: 0;
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+background-color: #fff; /* Black fallback color */
+background-color: #fff; /* Black w/opacity */
+overflow-x: hidden; /* Disable horizontal scroll */
+transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+-webkit-transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+position: relative;
+top: 25%; /* 25% from the top */
+width: 100%; /* 100% width */
+text-align: center; /* Centered text/links */
+margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+padding: 8px;
+text-decoration: none;
+font-size: 1rem;
+color: #818181;
+display: block; /* Display block instead of inline */
+-webkit-transition: 0.2s; /* Transition effects on hover (color) */
+transition: 0.2s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+color: #ffd3d9;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+position: absolute;
+top: -13px;
+right: 5px;
+font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+.overlay a {font-size: 20px}
+.overlay .closebtn {
+font-size: 40px;
+top: 15px;
+right: 35px;
+}
+}
