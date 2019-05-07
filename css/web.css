@@ -33,10 +33,6 @@ mark {
 background-color: #fadadd;
 }
 
-.home-cont {
-//background-color: #ffd3d9;
-}
-
 .home-text {
 font-size: 1.5rem;
 margin-top: 5%%;
@@ -47,7 +43,7 @@ line-height: 2.5rem;
 font-size: .8rem;
 color: darkgrey;
 margin-top: 10%;
-margin-bottom: 30%;   
+margin-bottom: 5%;   
 }
 
 .footer-text {
@@ -61,25 +57,6 @@ h2 {
 font-size: 1rem;
 }
 
-h4 {
-font-size: 0.6rem;
-color: darkgray;
-text-align: center;
-}
-
-.nav-menu {
-margin-bottom: 30%;
-}
-
-.blog-post-image {
-width: 100%;
-height: 200px;
-position: relative;
-margin-top: 1rem;
-margin-bottom: 1rem;
-margin: 0 auto;
-}
-
 h3 {
 position: absolute;
 bottom: .5px;
@@ -91,11 +68,41 @@ h3 a {
 text-decoration: none;
 }
 
+h4 {
+font-size: 0.6rem;
+color: darkgray;
+text-align: center;
+}
+
+.nav-menu {
+margin-bottom: 30%;
+}
+
+/*.blog-post-image {
+width: 100%;
+height: 200px;
+position: relative;
+margin-top: 1rem;
+margin-bottom: 1rem;
+margin: 0 auto;
+}
+
 .blog-box {
 margin-bottom: 10%;
 }
 
-/* hamburger menu */
+.blog-post-image {
+width: 300px;
+overflow: hidden;
+}*/
+
+.grid-container:hover .overlay-text {
+opacity: 1;
+color: #000;
+background-color: #fff;
+}
+
+/***HAMBURGER MENU***/
 .container {
 display: inline-block;
 cursor: pointer;
@@ -114,8 +121,8 @@ margin: 6px 0;
 
 .overlay-text {
 width: 20%;
-transition: .5s ease;
--webkit-transition: .5s ease;
+transition: .5s ease-in;
+-webkit-transition: .5s ease-in;
 opacity:0;
 color: white;
 bottom: -10px;
@@ -124,25 +131,6 @@ font-size: 1rem;
 letter-spacing: .1rem;
 }
 
-.blog-post-image {
-width: 300px;
-overflow: hidden;
-}
-
-.blog-post-image:hover .overlay-text {
-opacity: 1;
-color: #fff;
-}
-
-.hover-zoom:hover {
-transition: .5s ease;
--webkit-transform: scale(1.1); 
-transform: scale(1.1);
-}
-
-/* test nav */
-
-/* The Overlay (background) */
 .overlay {
 /* Height & width depends on how you want to reveal the overlay (see JS below) */    
 height: 100%;
@@ -183,6 +171,7 @@ transition: 0.2s; /* Transition effects on hover (color) */
 color: #ffd3d9;
 }
 
+
 /* Position the close button (top right corner) */
 .overlay .closebtn {
 position: absolute;
@@ -191,12 +180,83 @@ right: 5px;
 font-size: 60px;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-.overlay a {font-size: 20px}
-.overlay .closebtn {
-font-size: 40px;
-top: 15px;
-right: 35px;
+/***** HOME BLOG GRID CONTAINER/LAYOUT ****/
+.grid-container {
+display: grid;
+grid-gap: 1rem;
+overflow: hidden;
+position: relative;
+width: 100%;
 }
+
+.grid-item {
+background-color: darkgray;
+font-size: 30px;
+overflow: hidden;
 }
+
+.grid-item img {
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+width: 100%;
+height: auto;
+overflow: hidden;
+}
+
+.grid-item img:hover {
+-webkit-transform: scale(1.1); 
+transform: scale(1.1);
+-webkit-transition: 0.5s ease-in;
+transition: 0.5s ease-in;
+overflow: hidden;
+}
+
+.blog-post-image:hover .overlay-text {
+opacity: 1;
+color: #fff;
+}
+
+.top-grid {
+height: 50vh;
+grid-template-columns: 55%;
+}
+
+.middle-grid {
+grid-template-columns: 45%;
+height: 50vh;
+}
+
+.bottom-grid {
+grid-template-columns: auto auto auto;
+padding-top: 1rem;
+height: 20vh;
+}
+
+.item1 {
+grid-row-start: 1;
+grid-row-end: 3;
+}
+
+.item2 {
+grid-row-start: 1;
+grid-column-end: 3;
+}
+
+.item4 {
+grid-row-start: 3;
+grid-row-end: 4;
+}
+
+.item5 {
+grid-row-start: 2;
+grid-row-end: 2;
+}
+
+.item6 {
+grid-row-start: 2;
+grid-row-end: 4;
+}
+
+
+
