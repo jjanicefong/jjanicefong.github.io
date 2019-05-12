@@ -6,6 +6,7 @@
       <meta http-equiv="X-UA-Compatible" content = "ie=edge">
       <link rel="dns-prefetch" href="//fonts.googleapis.com">
       <link rel="shortcut icon" href="/img/jf-logo.png" type="image/png">
+       <link rel="stylesheet" href="css/media-queries.css">
       <title>Janice Fong | Portfolio</title>
       <meta name="author" content="Janice Fong">
       <meta name="description" content="Janice Fong is a Digital Design and Web Development student in Vancouver, BC.">
@@ -100,12 +101,7 @@ overflow: hidden;
 animation: fadeIn 2.5s ease-in-out;
 }
 
-.blog-post-image img {
-left: -30px; 
-position: relative;
-}
-
-button {
+.button {
 background-color: #ffd3d9; 
 border: none;
 padding: 10px 10px;
@@ -116,7 +112,7 @@ font-size: 12px;
 margin-bottom: 20%;
 }
     
-button:hover {
+.button:hover {
 color: pink;
 border: darkgray solid;
 background-color: #fff;
@@ -215,6 +211,88 @@ top: 15px;
 right: 35px;
 }
 }
+    
+@media screen and (min-width: 768px) {
+    
+    .bottom-text {
+        width: 300px;
+        height: 300px;
+        float: left;
+    }
+    
+    img {
+        float: right;
+        margin-left: 2rem;
+    }
+    
+    
+    .home-subtext {
+        
+        margin-top: 15px;
+        height: 520px;
+        display: flex;
+        
+        margin-bottom: 0;
+        top: 0;
+    }
+    
+    .button {
+        position: relative;
+        left: 0;
+    }
+}
+    
+@media screen and (min-width: 1024px) {
+
+  .bottom-text {
+        width: 400px;
+        height: 400px;
+        float: left;
+        margin-top: 0px;
+    }
+    
+    img {
+        float: right;
+        margin-left: 4rem;
+        width: 500px;
+        height: 650px;
+    }
+    
+    
+    .home-subtext {
+        
+        margin-top: 20px;
+        height: 520px;
+        display: flex;
+        top: 0;
+        
+        margin-bottom: 100px;
+    }
+    
+    .button {
+        position: relative;
+        left: 0;
+    }
+    
+    .top-text {
+        margin-top: -150px;
+    }
+    
+}
+    
+@media screen and (min-width: 1280px) {
+    
+    .home-subtext {
+        display: flex;
+        align-content: center;
+        justify-content:center;
+    }
+    
+        .top-text {
+        margin-top: -250px;
+    }
+    
+}
 </style>
 </head>
 
@@ -253,29 +331,18 @@ right: 35px;
             <p class="top-text"><mark>ABOUT ME</mark><hr width="100px"><br>
          </div>            
          <div class="home-subtext">
-            <p class="bottom-text">about janice,
-            + i am in my early 20’s, developing a knack for all things design and collectively pinning down places around the world.
-
-            + i’ve drawn and painted since i was a little girl and have always had a taste for fashion.
-
-            + my roots are from Hong Kong, but i was born and bred in Vancouver.
-
-            + i finished my academic for interior design and am currently a student in digital design and development.
-
-            janice, x</p><br><br>
-            <button href="/jjanicefong.github.io/janicefong-resume.pdf">RESUME</button>
-             <button href="#">EMAIL</button>
-
-         <div class="blog-post-image">
-            <a href="#">
-            <img src="img/janicefong.JPG" alt="test" width="400px" height="520px" class="hover-zoom">
-            </a>
-         </div>
+            <p class="bottom-text">
+            2nd year digital design and web development student developing a solid foundation in interactive and dynamic applications through various digital media platforms. <br><br>Innovation drove me to immerse into an industry that encourages creativity and systematic planning to build web and mobile applications.<br><br>Essentially, I find joy in turning ideas into reality.<br><br>
+      
+             <a href="/jjanicefong.github.io/janicefong-resume.pdf" class="button" target="_blank">RESUME</a>
+             <a href="#" class="button">EMAIL</a>
+             </p>
+            <img src="img/janicefong.JPG" alt="test" width="400px" height="520px">
         </div></section>
          <!--footer-->
          <footer class="main-footer">
 
-             <h4 class="copyright"><mark>2019 &copy; JANICE FONG DESIGNS - Let's Connect! <a href = "mailto: janicefongdesigns@gmail.com">janicefongdesigns@gmail.com</a></mark></h4>
+         <h4 class="copyright"><mark>2019 &copy; JANICE FONG DESIGNS - Let's grab a coffee! <a href = "mailto: janicefongdesigns@gmail.com">janicefongdesigns@gmail.com</a></mark></h4>
          </footer>
               </div>
                 <script src="js/web.js"></script>
