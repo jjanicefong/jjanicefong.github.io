@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+      <meta http-equiv="X-UA-Compatible" content = "ie=edge">
+      <link rel="dns-prefetch" href="//fonts.googleapis.com">
+      <link rel="shortcut icon" href="/img/jf-logo.png" type="image/png">
+       <link rel="stylesheet" href="css/media-queries.css">
+      <title>Janice Fong | Portfolio</title>
+      <meta name="author" content="Janice Fong">
+      <meta name="description" content="Janice Fong is a Digital Design and Web Development student in Vancouver, BC.">
+      <meta name="keywords" content="Janice Fong, janice fong, Janice, Fong, janice, fong, digital design, web development, web design, mobile design, web application, mobile application, branding, graphic design, UX design, UI design, user experience, user interface, vancouver, Vancouver, portfolio, BCIT, Design, Portfolio, janice fong portfolio, janice fong resume">
+<!-- About CSS -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+body {
+font-family: 'Roboto Mono', monospace;
+}
+
+.page-wrap {
+width: 90%;
+margin: 0 auto;
+}
+
+.nav-button {
+text-decoration: none;
+font-size: 1.2rem;
+position: relative;
+top: 20px;
+}
+
+hr {
+float: left;
+color: lightgray;
+}
+
+a {
+color: #000;
+}
+
+a:hover {
+color: #ffd3d9;
+}
+
+mark {
+background-color: #fadadd;
+}
+
+.home-text {
+font-size: 1.5rem;
+margin-top: 5%%;
+line-height: 2.5rem;
+}
+
+.home-subtext {
+font-size: .8rem;
+color: darkgrey;
+margin-top: 10%;
+margin-bottom: 30%;   
+}
+
+.footer-text {
+font-size: .75rem;
+color: darkgrey;
+margin-top: 5%;
+margin-bottom: 15%;
+}
+
+
+h2 {
+font-size: 1rem;
+}
+
+h4 {
+font-size: 0.6rem;
+color: darkgray;
+text-align: center;
+}
+
+.nav-menu {
+margin-bottom: 30%;
+}
+
+h3 {
+position: absolute;
+bottom: .5px;
+left: 3px;
+font-size: .8rem;
+}
+
+h3 a {
+text-decoration: none;
+}
+
+.blog-post-image {
+width: 100%;
+height: auto;
+overflow: hidden;
+animation: fadeIn 2.5s ease-in-out;
+}
+
+.button {
+background-color: #ffd3d9; 
+border: none;
+padding: 10px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 12px;
+margin-bottom: 20%;
+}
+    
+.button:hover {
+color: pink;
+border: darkgray solid;
+background-color: #fff;
+}
+
+@keyframes fadeIn {
+0%{opacity:0;}
+100%{opacity:1;}
+}
+
+/* hamburger menu */
+.container {
+display: inline-block;
+cursor: pointer;
+float: right;
+position: relative;
+right: 0;
+top: 11px;
+}
+
+.bar1, .bar2, .bar3 {
+width: 30px;
+height: 4px;
+background-color: #818181;
+margin: 6px 0;
+}
+
+.overlay-text {
+width: 20%;
+transition: .5s ease;
+-webkit-transition: .5s ease;
+opacity:0;
+color: white;
+bottom: -10px;
+position: relative;
+font-size: 1rem;
+letter-spacing: .1rem;
+}
+    
+input, textarea {
+width: 90%;
+padding: 10px;
+margin: 1rem;
+border: 1px solid #ffd3d9;
+}
+
+    textarea {
+        height: 200px;
+    }
+
+/* test nav */
+
+/* The Overlay (background) */
+.overlay {
+/* Height & width depends on how you want to reveal the overlay (see JS below) */    
+height: 100%;
+width: 0;
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+background-color: #fff; /* Black fallback color */
+background-color: #fff; /* Black w/opacity */
+overflow-x: hidden; /* Disable horizontal scroll */
+transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+-webkit-transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+position: relative;
+top: 25%; /* 25% from the top */
+width: 100%; /* 100% width */
+text-align: center; /* Centered text/links */
+margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+padding: 8px;
+text-decoration: none;
+font-size: 1rem;
+color: #818181;
+display: block; /* Display block instead of inline */
+-webkit-transition: 0.2s; /* Transition effects on hover (color) */
+transition: 0.2s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+color: #ffd3d9;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+position: absolute;
+top: -13px;
+right: 5px;
+font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+.overlay a {font-size: 20px}
+.overlay .closebtn {
+font-size: 40px;
+top: 15px;
+right: 35px;
+}
+}
+    
+@media screen and (min-width: 768px) {
+    
+    
+
+    .home-subtext {
+        
+        margin-top: 15px;
+        height: 520px;
+        display: flex;
+        
+        margin-bottom: 0;
+        top: 0;
+    }
+    
+    .button {
+        position: relative;
+        left: 0;
+    }
+}
+    
+@media screen and (min-width: 1024px) {
+
+
+    
+    .home-subtext {
+        
+        margin-top: 20px;
+        height: 520px;
+        display: flex;
+        top: 0;
+        
+        margin-bottom: 100px;
+    }
+    
+    .button {
+        position: relative;
+        left: 0;
+    }
+    
+    .top-text {
+        margin-top: -150px;
+    }
+    
+}
+    
+@media screen and (min-width: 1280px) {
+    
+
+        .top-text {
+        margin-top: -250px;
+    }
+    
+}
+</style>
+</head>
+
+   <body class="home blog">
+      <div class="page-wrap">
+         <!--header-->
+         <header id="head">
+            <div class="head-area">
+               <div class="head-cont">
+                  <div class="nav-menu">
+                       <!--<img src="img/jf-logo.png" alt="logo" width="60px">-->
+                        <a href="index.html" class="nav-button">JANICE FONG</a> 
+                     <div id="myNav" class="overlay">
+                           <!-- Button to close the overlay navigation -->
+                            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content">
+                              <a href="index.html">HOME</a>
+                              <a href="#portfolio">PORTFOLIO</a>
+                              <a href="about.html">ABOUT</a>
+                              <a href="/jjanicefong.github.io/janicefong-resume.pdf" target="_blank">RESUME</a>
+                              <a href="#contact">CONTACT</a>
+                           </div>
+                     </div>
+                        <div class="container icon" onclick="openNav()">
+                             <div class="bar1"></div>
+                             <div class="bar2"></div>
+                             <div class="bar3"></div>
+                           </div>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <!--home text-->
+          <section class="contact-page">
+         <div class="home-text">
+            <p class="top-text"><mark>CONTACT</mark><hr width="100px"><br>
+         </div>            
+         <div class="home-subtext">
+            <p class="bottom-text">
+            Get in touch with me! 
+             </p>
+             
+             <form method="post" action="#">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Last Name">
+                <input type="text" placeholder="Subject">
+                <input type="text" placeholder="Email">
+                 <textarea type="text" placeholder="Message" id="message"></textarea>
+                 <button type="submit" class="button">Submit</button>
+             </form>
+             
+        </div></section>
+         <!--footer-->
+         <footer class="main-footer">
+
+         <h4 class="copyright"><mark>2019 &copy; JANICE FONG DESIGNS - Let's grab a coffee! <a href = "mailto: janicefongdesigns@gmail.com">janicefongdesigns@gmail.com</a></mark></h4>
+         </footer>
+              </div>
+                <script src="js/web.js"></script>
+   </body>
+</html>
