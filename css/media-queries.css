@@ -9,6 +9,11 @@
         right: 35px;
     }
     
+    .full-menu {
+        position: absolute;
+        visibility: hidden;
+    }
+    
     .home-subtext button {
         margin-top: 1rem;
     }
@@ -92,6 +97,10 @@
     body {
         margin-left: 5%;
         margin-right: 5%;
+    }
+    
+    .full-menu {
+        display: none;
     }
   
     .overlay a {font-size: 1.2rem;}
@@ -186,6 +195,28 @@
 /* #### Tablets Portrait or Landscape #### */
 @media screen and (min-width: 768px) {
     
+    .icon {
+        display: none;
+    }
+    
+    .full-menu {
+
+        display: inline-block;
+        float: right;
+        position: relative;
+        top: 25px;
+    }
+
+    .full-menu a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #818181;
+    }
+    
+    a:hover {
+        color: #ffd3d9;
+    }
+
     .home-text {
         margin-top: -60px;
     }
@@ -282,6 +313,30 @@
 /* desktop */
 @media screen and (min-width: 1024px) {
 
+    
+    .icon {
+        display: none;
+    }
+    
+    .full-menu {
+        display: inline-block;
+        float: right;
+        position: relative;
+        top: 25px;
+        padding: 10px;
+    }
+
+    .full-menu a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #818181;
+    }
+    
+    a:hover {
+        color: #ffd3d9;
+    }
+    
+    
     .overlay-text {
     font-size: 1.5rem;
     }
