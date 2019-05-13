@@ -330,13 +330,13 @@ right: 35px;
          <div class="home-subtext">
             <p class="bottom-text">Get in touch with me!</p>
              
-             <form action="#" method="post" id="contact-form">
+             <form action="#" id="contact-form">
                 <input type="text" id="fname" placeholder="First Name*" required>
                 <input type="text" id="lname" placeholder="Last Name*" required>
                 <input type="text" id="subj" placeholder="Subject*" required>
                 <input type="text" id="email" placeholder="Email*" required>
-                <input type="text" id="msg" placeholder="Message*" id="message" required>
-                <button type="submit" class="button" onclick="sendData()">Submit</button>
+                <input type="text" id="msg" placeholder="Message*" ] required>
+                <button type="submit" class="button" >Submit</button>
              </form>
              
         </div>
@@ -348,40 +348,53 @@ right: 35px;
               </div>
        
        
+        <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.1.0/firebase-firestore.js"></script>
+       <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
         <script>
           // Your web app's Firebase configuration
-          var firebaseConfig = {
-            apiKey: "AIzaSyBCY7EON_OMa6nFluzSaJOKEWvmUNC6CL8",
-            authDomain: "portfolio-dd9d6.firebaseapp.com",
-            databaseURL: "https://portfolio-dd9d6.firebaseio.com",
-            projectId: "portfolio-dd9d6",
-            storageBucket: "portfolio-dd9d6.appspot.com",
-            messagingSenderId: "562930259486",
-            appId: "1:562930259486:web:86f6ce277cf416b8"
-          };
-          // Initialize Firebase
-          firebase.initializeApp(firebaseConfig);
+          const firebaseConfig = {
+  apiKey: "AIzaSyBCY7EON_OMa6nFluzSaJOKEWvmUNC6CL8",
+  authDomain: "portfolio-dd9d6.firebaseapp.com",
+  databaseURL: "https://portfolio-dd9d6.firebaseio.com",
+  projectId: "portfolio-dd9d6",
+  storageBucket: "portfolio-dd9d6.appspot.com",
+  messagingSenderId: "562930259486",
+  appId: "1:562930259486:web:86f6ce277cf416b8"
+};
             
-        //contact form database - firebase 
+          var form = document.querySelector("#contact-form"),
+    fname = document.querySelector("#fname"),
+    lname = document.querySelector("#lname"),
+    msg = document.querySelector("#msg"),
+    subj = document.querySelector("#subj"),
+    email = document.querySelector("#email");
 
-        var datab = firebase.firestore();
 
-        function sendData() {
-            fname = document.querySelector("#fname").value;
-            lname = document.querySelector("#lname").value;
-            subj = document.querySelector("#subj").value;
-            email = document.querySelector("#email").value;
-            msg = document.querySelector("#msg").value;
+function firebasePush(input1, input2, input3, input4, input5) {
+    if (!firebase.apps.length) {
+        firebase.initializeApp(firebaseConfig);
+    }
+    var mailsRef = firebase.database().ref('contacts').push().set({
+        fname: input1.value,
+        lname: input2.value,
+        msg: input3.value,
+        subj: input4.value,
+        email: input5.value 
 
-            datab.collection("contact-form").add({
-                email: email,
-                firstname: fname,
-                lastname: lname,
-                subject: subj,
-                message: msg
-            });
+    });
 
-        }
+}
+
+if (form) {
+    form.addEventListener('submit', function(evt) {
+        evt.preventDefault();
+        firebasePush(fname, lname, msg, subj, email);
+        return alert('Data Successfully Sent to Realtime Database');
+    })
+}
+
+        
         </script>
       <script src="js/web.js"></script>
    </body>
