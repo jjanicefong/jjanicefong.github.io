@@ -8,3 +8,23 @@ function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
 
+//contact form database - firebase 
+
+var datab = firebase.firestore();
+
+function sendData() {
+    fname = document.querySelector("#fname").value;
+    lname = document.querySelector("#lname").value;
+    subj = document.querySelector("#subj").value;
+    email = document.querySelector("#email").value;
+    msg = document.querySelector("#msg").value;
+    
+    datab.collection("contact-form").add({
+        email: email,
+        firstname: fname,
+        lastname: lname,
+        subject: subj,
+        message: msg
+    });
+    
+}

@@ -12,6 +12,95 @@
       <meta name="author" content="Janice Fong">
       <meta name="description" content="Janice Fong is a Digital Design and Web Development student in Vancouver, BC.">
       <meta name="keywords" content="Janice Fong, janice fong, Janice, Fong, janice, fong, digital design, web development, web design, mobile design, web application, mobile application, branding, graphic design, UX design, UI design, user experience, user interface, vancouver, Vancouver, portfolio, BCIT, Design, Portfolio, janice fong portfolio, janice fong resume">
+       
+    <style>
+        .grid-container {
+            margin-top: 100px;
+        }   
+        
+        @media screen and (min-width: 1024px) {
+     .overlay-text {
+        font-size: .75rem;
+    }
+    
+    .grid-container {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .grid-item img {
+        transform: scale(1.07);
+        transition: .5s ease-in;
+    }
+    
+    .grid-item img:hover {
+        transform: scale(1.2);
+    }
+    
+    .top-grid {
+        display: grid;
+        height: auto;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+            "item1 item2 item3";
+    }
+    
+    .item1 {
+        grid-area: item1;
+    }
+    
+    .item2 {
+        grid-area: item2;
+    }
+    
+    .item3 {
+        grid-area: item3;
+    }
+    
+    .middle-grid {
+        display: grid;
+        height: auto;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+            "item4 item5 item6";
+    }
+    
+    .item4 {
+        grid-area: item4;
+    }
+    
+    .item5 {
+        grid-area: item5;
+    }
+    
+    .item6 {
+        grid-area: item6;
+    }
+    
+    .bottom-grid {
+        display: grid;
+        height: auto;
+        grid-template-columns: auto auto auto;
+        grid-template-areas: 
+            "item7 item8 item9";
+    }
+    
+    .item7 {
+        grid-area: item7;
+    }
+    
+    .item8 {
+        grid-area: item8;
+    }
+    
+    .item9 {
+        grid-area: item9;
+    }
+
+        }
+       
+    </style>
+       
    </head>
 
    <body class="home blog">
@@ -37,7 +126,7 @@
                         <div class="overlay-content">
                     
                               <a href="index.html">HOME</a>
-                              <a href="#portfolio">PORTFOLIO</a>
+                              <a href="/jjanicefong.github.io/about.html">PORTFOLIO</a>
                               <a href="/jjanicefong.github.io/about.html">ABOUT</a>
                               <a href="/jjanicefong.github.io/janicefong-resume.pdf" target="_blank">RESUME</a>
                               <a href="/jjanicefong.github.io/contact.html">CONTACT</a>
@@ -56,30 +145,16 @@
          </header>
          <!--home text-->
          <div class="home-text">
-            <p class="top-text">hi! i'm janice -<br> a <mark>UI Designer and Front-End Developer</mark> based in Vancouver.<hr><br>
+            <p class="top-text"><mark>PORTFOLIO</mark><hr><br>
          </div>            
          <div class="home-subtext">
-             <p class="bottom-text">currently seeking a summer 2019 internship.</p>
-             <h2 id="about-me"><a href="about.html">ABOUT ME &#10230;</a></h2>
-             
-            <a href="#" class="button">LET'S CONNECT</a>
-             
-             
-             <div id="scroll-button"><a href="#portfolio"></a>
-            <div class="scroll-container">
-              <div class="chevron"></div>
-              <div class="chevron"></div>
-              <div class="chevron"></div>
-                <span class="text"><a href="#portfolio-home">view portfolio</a></span>
+             <p class="bottom-text">recent projects completed in school and personal freelance work for clients.</p>
             </div>
-             </div>
-             
-         </div>
+       </div>
          <!--home container-->
          <div class="home-cont">
             <div class="blogs">
               <div class="blog-posts" id="portfolio-home">
-                  <h2><a href="#" id="portfolio">PORTFOLIO &#10230;</a></h2><hr><br><br>
                 <div class="grid-container top-grid">
                     <div class="grid-item item1">
                         <a href="#">
@@ -123,10 +198,8 @@
          <!--footer-->
          <footer class="main-footer">
             
-             <h4 class="copyright"><mark>2019 &copy; JANICE FONG DESIGNS - Let's grab a coffee! <a href = "mailto:janicefongdesigns@gmail.com">janicefongdesigns@gmail.com</a></mark></h4>
+             <h4 class="copyright"><mark>2019 &copy; JANICE FONG DESIGNS - Let's grab a coffee! <a href = "mailto: janicefongdesigns@gmail.com">janicefongdesigns@gmail.com</a></mark></h4>
          </footer>
-
-      </div>
       <script src="js/web.js"></script>
    </body>
 </html>

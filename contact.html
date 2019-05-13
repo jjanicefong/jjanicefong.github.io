@@ -11,6 +11,9 @@
       <meta name="author" content="Janice Fong">
       <meta name="description" content="Janice Fong is a Digital Design and Web Development student in Vancouver, BC.">
       <meta name="keywords" content="Janice Fong, janice fong, Janice, Fong, janice, fong, digital design, web development, web design, mobile design, web application, mobile application, branding, graphic design, UX design, UI design, user experience, user interface, vancouver, Vancouver, portfolio, BCIT, Design, Portfolio, janice fong portfolio, janice fong resume">
+    
+
+       
 <!-- About CSS -->
 <style>
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
@@ -50,7 +53,7 @@ background-color: #fadadd;
 
 .home-text {
 font-size: 1.5rem;
-margin-top: 5%%;
+margin-top: 5%;
 line-height: 2.5rem;
 }
 
@@ -152,16 +155,16 @@ font-size: 1rem;
 letter-spacing: .1rem;
 }
     
-input, textarea {
+input {
 width: 90%;
 padding: 10px;
 margin: 1rem;
 border: 1px solid #ffd3d9;
 }
 
-    textarea {
-        height: 200px;
-    }
+#message {
+height: 8rem;
+}
 
 /* test nav */
 
@@ -321,31 +324,44 @@ right: 35px;
             </div>
          </header>
          <!--home text-->
-          <section class="contact-page">
          <div class="home-text">
-            <p class="top-text"><mark>CONTACT</mark><hr width="100px"><br>
+            <p class="top-text"><mark>CONTACT</mark><hr><br>
          </div>            
          <div class="home-subtext">
-            <p class="bottom-text">
-            Get in touch with me! 
-             </p>
+            <p class="bottom-text">Get in touch with me!</p>
              
              <form method="post" action="#">
-                <input type="text" placeholder="First Name">
-                <input type="text" placeholder="Last Name">
-                <input type="text" placeholder="Subject">
-                <input type="text" placeholder="Email">
-                 <textarea type="text" placeholder="Message" id="message"></textarea>
-                 <button type="submit" class="button">Submit</button>
+                <input type="text" id="fname" placeholder="First Name*" required>
+                <input type="text" id="lname" placeholder="Last Name*" required>
+                <input type="text" id="subj" placeholder="Subject*" required>
+                <input type="text" id="email" placeholder="Email*" required>
+                <input type="text" id="msg" placeholder="Message*" id="message" required>
+                <button type="submit" class="button" onclick="sendData()">Submit</button>
              </form>
              
-        </div></section>
+        </div>
          <!--footer-->
          <footer class="main-footer">
 
-         <h4 class="copyright"><mark>2019 &copy; JANICE FONG DESIGNS - Let's grab a coffee! <a href = "mailto: janicefongdesigns@gmail.com">janicefongdesigns@gmail.com</a></mark></h4>
+         <h4 class="copyright"><mark>2019 &copy; JANICE FONG DESIGNS - Let's grab a coffee! <a href = "mailto:janicefongdesigns@gmail.com">janicefongdesigns@gmail.com</a></mark></h4>
          </footer>
               </div>
                 <script src="js/web.js"></script>
+       
+       
+        <script>
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+            apiKey: "AIzaSyBCY7EON_OMa6nFluzSaJOKEWvmUNC6CL8",
+            authDomain: "portfolio-dd9d6.firebaseapp.com",
+            databaseURL: "https://portfolio-dd9d6.firebaseio.com",
+            projectId: "portfolio-dd9d6",
+            storageBucket: "portfolio-dd9d6.appspot.com",
+            messagingSenderId: "562930259486",
+            appId: "1:562930259486:web:86f6ce277cf416b8"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+        </script>
    </body>
 </html>

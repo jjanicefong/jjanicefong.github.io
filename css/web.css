@@ -141,6 +141,7 @@ background-color: #fff;
 hr {
 float: left;
 color: lightgray;
+width: 100px;
 }
 
 a {
@@ -180,7 +181,7 @@ h2 > a:hover:before {
 
 .home-text {
 font-size: 1.5rem;
-margin-top: 5%%;
+margin-top: 5%;
 line-height: 2.5rem;
 }
 
