@@ -1,391 +1,398 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .page-wrap {
-width: 90%;
-margin: 0 auto;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .nav-button {
-text-decoration: none;
-font-size: 1.2rem;
-position: relative;
-top: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+    top: 20px;
 }
 
 .button {
-background-color: #ffd3d9; 
-border: none;
-padding: 10px 10px;
-text-align: center;
-text-decoration: none;
-display: inline-block;
-font-size: 12px;
-margin-bottom: 20%;
+    background-color: #ffd3d9;
+    border: none;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin-bottom: 20%;
 }
 
 .button:hover {
-color: pink;
-border: darkgray solid;
-background-color: #fff;
+    color: pink;
+    border: darkgray solid;
+    background-color: #fff;
 }
 
 #about-me {
-margin-top: 1rem;
-margin-bottom: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 
 /* scroll btn */
 
 #scroll-button {
-display: flex;
-justify-content: center;
-align-items: center;
-position: relative;
-top: -20vh;
-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -20vh;
+    bottom: 0;
 }
 
 .chevron {
-  position: relative;
-  width: 28px;
-  height: 8px;
-  opacity: 0;
-  color: #000;
-  transform: scale3d(0.5, 0.5, 0.5);
-  animation: move 3s ease-out infinite;
+    position: relative;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    color: #000;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
 }
 
 .chevron:first-child {
-  animation: move 3s ease-out 1s infinite;
+    animation: move 3s ease-out 1s infinite;
 }
 
 .chevron:nth-child(2) {
-  animation: move 3s ease-out 2s infinite;
+    animation: move 3s ease-out 2s infinite;
 }
 
 .chevron:before,
 .chevron:after {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 51%;
-  background: #000;
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #000;
 }
 
 .chevron:before {
-  left: 0;
-  transform: skew(0deg, 30deg);
+    left: 0;
+    transform: skew(0deg, 30deg);
 }
 
 .chevron:after {
-  right: 0;
-  width: 50%;
-  transform: skew(0deg, -30deg);
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
 }
 
 @keyframes move {
-  25% {
-    opacity: 1;
+    25% {
+        opacity: 1;
 
-  }
-  33% {
-    opacity: 1;
-    transform: translateY(30px);
-  }
-  67% {
-    opacity: 1;
-    transform: translateY(40px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
-  }
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateY(30px);
+    }
+
+    67% {
+        opacity: 1;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
 }
 
 .text {
-  display: block;
+    display: block;
     text-align: center;
-  margin-top: 75px;
-  margin-left: -30px;
-  font-size: 12px;
-  color: #000;
-  text-transform: uppercase;
-  white-space: nowrap;
-  opacity: .25;
-  animation: pulse 2s linear alternate infinite;
+    margin-top: 75px;
+    margin-left: -30px;
+    font-size: 12px;
+    color: #000;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
 }
 
 @keyframes pulse {
-  to {
-    opacity: 1;
-  }
+    to {
+        opacity: 1;
+    }
 }
 
 /****/
-    
+
 button:hover {
-color: pink;
-border: darkgray solid;
-background-color: #fff;
+    color: pink;
+    border: darkgray solid;
+    background-color: #fff;
 }
 
 hr {
-float: left;
-color: lightgray;
-width: 100px;
+    float: left;
+    color: lightgray;
+    width: 100px;
 }
 
 a {
-color: #000;
+    color: #000;
 }
 
 mark {
-background-color: #fadadd;
+    background-color: #fadadd;
 }
 
 h2 > a {
-  position: relative;
-  color: #000;
-  text-decoration: none;
+    position: relative;
+    color: #000;
+    text-decoration: none;
 }
 
 h2 > a:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 3px;
-  bottom: 0;
-  left: 0;
-  background-color: #ffd3d9;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffd3d9;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
 }
 
 h2 > a:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
 }
 
 .home-text {
-font-size: 1.5rem;
-margin-top: 5%;
-line-height: 2.5rem;
+    font-size: 1.5rem;
+    margin-top: 5%;
+    line-height: 2.5rem;
 }
 
 .home-subtext {
-font-size: .8rem;
-color: darkgrey;
-margin-top: 10%;
-margin-bottom: 5%;   
+    font-size: .8rem;
+    color: darkgrey;
+    margin-top: 10%;
+    margin-bottom: 5%;
 }
 
 .footer-text {
-font-size: .75rem;
-color: darkgrey;
-margin-top: 5%;
-margin-bottom: 15%;
+    font-size: .75rem;
+    color: darkgrey;
+    margin-top: 5%;
+    margin-bottom: 15%;
 }
 
 h2 {
-font-size: 1rem;
+    font-size: 1rem;
 }
 
 h3 {
-position: absolute;
-bottom: .5px;
-left: 3px;
-font-size: .8rem;
+    position: absolute;
+    bottom: .5px;
+    left: 3px;
+    font-size: .8rem;
 }
 
 h3 a {
-text-decoration: none;
+    text-decoration: none;
 }
 
 h4 {
-font-size: 0.6rem;
-color: darkgray;
-text-align: center;
+    font-size: 0.6rem;
+    color: darkgray;
+    text-align: center;
 }
 
 .nav-menu {
-margin-bottom: 30%;
+    margin-bottom: 30%;
 }
 
 
 .grid-container:hover .overlay-text {
-opacity: 1;
-color: #000;
-background-color: #fff;
+    opacity: 1;
+    color: #000;
+    background-color: #fff;
 }
 
 /***HAMBURGER MENU***/
 .container {
-display: inline-block;
-cursor: pointer;
-float: right;
-position: relative;
-right: 0;
-top: 11px;
+    display: inline-block;
+    cursor: pointer;
+    float: right;
+    position: relative;
+    right: 0;
+    top: 11px;
 }
 
-.bar1, .bar2, .bar3 {
-width: 30px;
-height: 4px;
-background-color: #818181;
-margin: 6px 0;
+.bar1,
+.bar2,
+.bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #818181;
+    margin: 6px 0;
 }
 
 .overlay-text {
-width: 20%;
-transition: .5s ease-in;
--webkit-transition: .5s ease-in;
-opacity:0;
-color: white;
-bottom: -10px;
-position: relative;
-font-size: 1rem;
-letter-spacing: .1rem;
+    width: 20%;
+    transition: .5s ease-in;
+    -webkit-transition: .5s ease-in;
+    opacity: 0;
+    color: white;
+    bottom: -10px;
+    position: relative;
+    font-size: 1rem;
+    letter-spacing: .1rem;
 }
 
 .overlay {
-/* Height & width depends on how you want to reveal the overlay (see JS below) */    
-height: 100%;
-width: 0;
-position: fixed; /* Stay in place */
-z-index: 1; /* Sit on top */
-left: 0;
-top: 0;
-background-color: #fff; /* Black fallback color */
-background-color: #fff; /* Black w/opacity */
-overflow-x: hidden; /* Disable horizontal scroll */
-transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
--webkit-transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: #fff;
+    /* Black fallback color */
+    background-color: #fff;
+    /* Black w/opacity */
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    -webkit-transition: 0.5s;
+    /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
 /* Position the content inside the overlay */
 .overlay-content {
-position: relative;
-top: 25%; /* 25% from the top */
-width: 100%; /* 100% width */
-text-align: center; /* Centered text/links */
-margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+    position: relative;
+    top: 25%;
+    /* 25% from the top */
+    width: 100%;
+    /* 100% width */
+    text-align: center;
+    /* Centered text/links */
+    margin-top: 30px;
+    /* 30px top margin to avoid conflict with the close button on smaller screens */
 }
 
 /* The navigation links inside the overlay */
 .overlay a {
-padding: 8px;
-text-decoration: none;
-font-size: 1rem;
-color: #818181;
-display: block; /* Display block instead of inline */
--webkit-transition: 0.2s; /* Transition effects on hover (color) */
-transition: 0.2s; /* Transition effects on hover (color) */
+    padding: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #818181;
+    display: block;
+    /* Display block instead of inline */
+    -webkit-transition: 0.2s;
+    /* Transition effects on hover (color) */
+    transition: 0.2s;
+    /* Transition effects on hover (color) */
 }
 
 /* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-color: #ffd3d9;
+.overlay a:hover,
+.overlay a:focus {
+    color: #ffd3d9;
 }
 
 
 /* Position the close button (top right corner) */
 .overlay .closebtn {
-position: absolute;
-top: -13px;
-right: 5px;
-font-size: 60px;
+    position: absolute;
+    top: -13px;
+    right: 5px;
+    font-size: 60px;
 }
 
 /***** HOME BLOG GRID CONTAINER/LAYOUT ****/
 .grid-container {
-display: grid;
-grid-gap: 1rem;
-overflow: hidden;
-position: relative;
-width: 100%;
+    display: grid;
+    grid-gap: 1rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 }
 
 .grid-item {
-background-color: darkgray;
-font-size: 30px;
-overflow: hidden;
+    font-size: 30px;
+    overflow: hidden;
 }
 
 .grid-item img {
-background-position: center;
-background-size: cover;
-background-repeat: no-repeat;
-width: 100%;
-height: auto;
-overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
 }
 
 .grid-item img:hover {
--webkit-transform: scale(1.1); 
-transform: scale(1.1);
--webkit-transition: 0.5s ease-in;
-transition: 0.5s ease-in;
-overflow: hidden;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: 0.5s ease-in;
+    transition: 0.5s ease-in;
+    overflow: hidden;
 }
 
 .blog-post-image:hover .overlay-text {
-opacity: 1;
-color: #fff;
+    opacity: 1;
+    color: #fff;
 }
 
 .top-grid {
-height: 50vh;
-grid-template-columns: 55%;
+    height: 50vh;
+    grid-template-columns: 100%;
 }
 
 .middle-grid {
-grid-template-columns: 45%;
-height: 50vh;
+    grid-template-columns: 100%;
+    height: 50vh;
 }
 
 .bottom-grid {
-grid-template-columns: auto auto auto;
-padding-top: 1rem;
-height: 20vh;
+    grid-template-columns: 100%;
+    padding-top: 1rem;
+    height: 50vh;
 }
 
 .item1 {
-grid-row-start: 1;
-grid-row-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 .item2 {
-grid-row-start: 1;
-grid-column-end: 3;
+    grid-row-start: 1;
+    grid-column-end: 3;
 }
 
 .item4 {
-grid-row-start: 3;
-grid-row-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
 }
 
 .item5 {
-grid-row-start: 2;
-grid-row-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
 }
-
-.item6 {
-grid-row-start: 2;
-grid-row-end: 4;
-}
-
-
-
