@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto Mono', monospace;
 }
@@ -144,6 +148,7 @@ hr {
 }
 
 a {
+    text-decoration: none;
     color: #000;
 }
 
@@ -233,6 +238,18 @@ h4 {
     opacity: 1;
     color: #000;
     background-color: #fff;
+}
+
+.social-media img {
+    width: 23px;
+    height: 23px;
+}
+
+.social-media {
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 
