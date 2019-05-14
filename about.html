@@ -25,6 +25,18 @@
             margin: 0 auto;
         }
 
+        .social-media img {
+            width: 23px;
+            height: 23px;
+            margin-left: 1rem;
+        }
+
+        .social-media {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+        }
         .nav-button {
             text-decoration: none;
             font-size: 1.2rem;
@@ -48,11 +60,35 @@
         mark {
             background-color: #fadadd;
         }
+        
+        .skills img {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1rem;
+            margin-left: .5rem;
+            flex-direction: column;
+        }
+        
+        .skills {
+
+            flex-direction: row;
+            margin-right: 3rem;
+        }
+        
+        .tools {
+            float: left;
+            display: flex;
+            position: inherit;
+        }
 
         .home-text {
             font-size: 1.5rem;
             margin-top: 5%;
             line-height: 2.5rem;
+        }
+        
+        .bottom-text {
+            position: relative;
         }
 
         .home-subtext {
@@ -111,6 +147,10 @@
             display: inline-block;
             font-size: 12px;
             margin-bottom: 20%;
+        }
+    
+        img {
+            margin: 0 auto;
         }
 
         .button:hover {
@@ -218,6 +258,27 @@
                 top: 15px;
                 right: 35px;
             }
+            
+            .full-menu {
+                display: none;
+            }
+            
+            .tools {
+            position: relative;
+            bottom: 0;
+            }
+            
+            #janicefong {
+                width: 20%;
+                height: auto;
+            }
+            
+            .bottom-text {
+                width: 10%;
+                height: auto;
+            }
+            
+            
         }
 
         @media screen and (min-width: 768px) {
@@ -298,10 +359,23 @@
                 display: flex;
                 align-content: center;
                 justify-content: center;
+                margin-right: 20rem;
             }
 
             .top-text {
                 margin-top: -250px;
+            }
+            
+            .tools {
+                position: relative;
+                top: -100px;
+                left: -400px;
+                top: 280px;
+            }
+            
+            #janicefong {
+                position: absolute;
+                margin-left: 20rem;
             }
 
         }
@@ -351,16 +425,49 @@
                 <hr><br>
         </div>
         <div class="home-subtext">
+            
+        
             <p class="bottom-text">
                 2nd year digital design and web development student developing a solid foundation in interactive and dynamic applications through various digital media platforms. <br><br>Innovation drove me to immerse into an industry that encourages creativity and systematic planning to build web and mobile applications.<br><br>Essentially, I find joy in turning ideas into reality.<br><br>
 
                 <a href="/jjanicefong.github.io/janicefong-resume.pdf" class="button" target="_blank">RESUME</a>
                 <a href="/jjanicefong.github.io/contact.html" class="button">EMAIL</a>
             </p>
-            <img src="img/janicefong.JPG" alt="janice fong" width="400" height="520">
+        <div class="tools">
+                <div class="skills">
+                    <img src="/jjanicefong.github.io/img/illustrator.png" alt="skill">
+                    <img src="/jjanicefong.github.io/img/photoshop.png" alt="skill">
+                    <img src="/jjanicefong.github.io/img/after-effects.png" alt="skill">
+                    <img src="/jjanicefong.github.io/img/lightroom.png" alt="skill">
+                    <img src="/jjanicefong.github.io/img/premier.png" alt="skill">
+                    <img src="/jjanicefong.github.io/img/html5.png" alt="skill">
+                </div>
+        </div><br>                
+
+      
+            
+            
+            <img src="img/janicefong.JPG" alt="janice fong" width="400" height="520" id="janicefong">
         </div>
         <!--footer-->
         <footer class="main-footer">
+            <div class="social-media">
+                <a href="https://www.instagram.com/janicefongdesigns/">
+                <img src="/jjanicefong.github.io/img/instagram.png" alt="instagram">
+                </a>          
+                
+                <a href="https://www.linkedin.com/in/janicefongdesigns/">
+                <img src="/jjanicefong.github.io/img/linkedin.png" alt="linkedin">
+                </a>                
+                
+                <a href="https://www.pinterest.ca/janicefong11/">
+                <img src="/jjanicefong.github.io/img/pinterest.png" alt="pinterest">
+                </a>                
+                
+                <a href="https://github.com/jjanicefong">
+                <img src="/jjanicefong.github.io/img/github.png" alt="github">
+                </a>
+            </div>
 
             <h4 class="copyright"><mark>2019 &copy; JANICE FONG DESIGNS - Let's grab a coffee! <a href="mailto:janicefongdesigns@gmail.com">janicefongdesigns@gmail.com</a></mark></h4>
         </footer>
