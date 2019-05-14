@@ -88,7 +88,7 @@
     }
 
     .bottom-grid {
-        display: grid;        
+        display: grid;
         grid-template-columns: 1fr;
         grid-template-areas:
             "item7"
@@ -208,7 +208,7 @@
     }
 
     .bottom-grid {
-        display: grid;  
+        display: grid;
         height: auto;
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -405,7 +405,7 @@
     .bottom-grid {
         grid-template-columns: auto auto auto;
         padding-top: 1rem;
-        height: 30vh;
+        height: 300px;
     }
 
     .item1 {
