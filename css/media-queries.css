@@ -1,5 +1,9 @@
 /* mobile */
 @media screen and (max-device-width: 375px) {
+    
+    .full-menu {
+        display: none;
+    }
 
     .overlay a {
         font-size: 1rem;
